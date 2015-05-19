@@ -1,0 +1,79 @@
+// Tint & Shade
+// Lighten and darken colors with tint and shade respectively.
+// Control the amount of white or black added with a percentage.
+//
+// @param [string] $color: color to lighten, $percentage: how much to lighten
+// @return [hex-color]
+// ------------------------------------
+
+// Add percentage of white to a color
+@function tint($color, $percent) {
+    @return mix($white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent) {
+    @return mix($black, $color, $percent);
+}
+
+
+// Rem Calculator
+// Lets you ouput rem values based on pixel input.
+// This works for single and multiple values.
+// Thanks @ZURB for making this available in Foundation.
+//
+// @param [string] $value: pixels
+// @return [number] | [null]
+// ------------------------------------
+
+// The default html and body font-size for the base rem value
+$iz-rem-base: 16px !default;
+
+// Strip the unit of measure and return the value
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+// Convert to rem
+@function convert-to-rem($value, $base-value: $iz-rem-base) {
+    $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+    @if ($value == 0rem) { $value: 0; } // scss-lint:disable ZeroUnit
+    @return $value;
+}
+
+// Calculate rem value
+@function rem($values, $base-value: $iz-rem-base) {
+    $max: length($values);
+
+    @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+    $rem-values: ();
+    @for $i from 1 through $max {
+        $rem-values: append($rem-values, convert-to-rem(nth($values, $i), $base-value));
+    }
+    @return $rem-values;
+}
+
+
+// Z Index Helper
+// Simplify the management of z-index with a lovely map of friendly names and a
+// function to fetch them.
+//
+// @param [string] $component: the layer to use
+// @return [number] | [null]
+// ------------------------------------
+$iz-z-layers: (
+    'default':  1,
+    'dropdown': 100,
+    'modal':    200,
+    'void':    -1000
+) !default;
+
+// A helper function to avoid having to type `map-get($iz-z-layers, ...)`
+@function z($layer) {
+    @if not map-has-key($iz-z-layers, $layer) {
+        @warn "No z-index found in $z-layers map for `#{$layer}`. Property omitted.";
+    }
+
+    @return map-get($iz-z-layers, $layer);
+}

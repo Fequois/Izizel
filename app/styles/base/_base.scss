@@ -1,0 +1,18 @@
+// Global box-sizing
+// Reset to border-box and allow changes to it on component levels
+// ------------------------------------
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    text-rendering: auto;
+}
