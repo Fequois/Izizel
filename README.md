@@ -3,7 +3,7 @@
 [![devDependency Status](https://david-dm.org/fequois/izizel/dev-status.svg)](https://david-dm.org/fequois/izizel#info=devDependencies)
 
 Izizel is a front-end starter kit with a bunch opinionated defaults. Its
-objective is to be a fast, flexible starting point for new web projects.
+objective is to be a fast and flexible starting point for new web projects.
 
 The key feature is the Sass files. Its structure is inspired by Smaccs, OOCSS
 and ITCSS but with a sprinkle of personal flair.
