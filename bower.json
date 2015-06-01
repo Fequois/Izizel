@@ -1,36 +1,9 @@
 {
-  "name": "Izizel",
-  "version": "0.2.0",
-  "authors": [
-    "Rasmus Eriksson <fequois@gmail.com>"
-  ],
-  "description": "Izizel is a basic starter kit for any web project.",
-  "moduleType": [
-    "node"
-  ],
-  "license": "Apache License 2.0",
-  "homepage": "https://github.com/Fequois/Izizel",
-  "ignore": [
-    ".bowerrc",
-    ".gitignore",
-    ".jshintignore",
-    ".jshintrc",
-    "**/.*",
-    "bower_components",
-    "bower.json",
-    "gruntfile.js",
-    "node_modules",
-    "package.json",
-    "README.md",
-    "source",
-    "spec",
-    "test",
-    "tests"
-  ],
+  "name": "Izizel Starter Kit",
+  "private": true,
   "dependencies": {
-    "jquery": "~1.11.3"
-  },
-  "devDependencies": {
+    "jquery": "~1.11.3",
+    "modernizr": "~2.8.3",
     "susy": "~2.2.5"
   }
 }
