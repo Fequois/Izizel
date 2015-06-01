@@ -5,16 +5,12 @@
 Izizel is a front-end starter kit with a bunch opinionated defaults. Its
 objective is to be a fast, flexible starting point for new web projects.
 
-The logic behind the Sass structure is inspired by Harry Roberts' [Inverted Triangle CSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) methodology. The diagram
-below gives you an overview of how it's been implemented.
+The key feature is the Sass files. Its structure is inspired by Smaccs, OOCSS
+and ITCSS but with a sprinkle of personal flair.
 
-![alt text](https://cloud.githubusercontent.com/assets/3535255/5917365/cacb8fc6-a613-11e4-9ff6-d2300adede7c.png "ITCSS Methodology")
-
-Classes are named following the BEM naming convention, and variables with a
-descriptive name. Abbreviations are only allowed where context can clearly
-describe what you're looking at.
-
-It's just a starting point; you're free to do with it whatever you wish.
+CSS classes are named following the BEM naming convention, and Sass variables
+with descriptive names. Abbreviations may be used where context clearly
+describes what they are.
 
 ## Features
 
