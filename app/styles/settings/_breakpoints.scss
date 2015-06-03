@@ -1,0 +1,16 @@
+// Breakpoints
+//
+// Sass map containing values for our breakpoint mixin. Set or change below
+// values to something that suits your project.
+//
+// Small:   640px
+// Medium:  641px
+// Large:   1025px
+// X-large: 1441px
+// ----------------------------------------------------------------------------
+$iz-breakpoints: (
+    'small':  (max-width: 40em),
+    'medium': (min-width: 40.063em),
+    'large':  (min-width: 64.063em),
+    'xlarge': (min-width: 90.063em)
+) !default;

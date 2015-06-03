@@ -1,18 +1,9 @@
 // Media Queries
+//
 // Simplifies management of media queries in our CSS. Takes our content,
 // eats a cookie and wraps it in a media query. Automagically.
-//
-// @param [string] $breakpoint: small, medium, large, xlarge
-// @return [media query and content]
-// ------------------------------------
-$iz-breakpoints: (
-    'small':  (max-width: 40em),     // small: 640px
-    'medium': (min-width: 40.063em), // medium: 641px
-    'large':  (min-width: 64.063em), // large: 1025px
-    'xlarge': (min-width: 90.063em)  // xlarge: 1441px
-) !default;
-
-@mixin media($name) {
+// ----------------------------------------------------------------------------
+@mixin mq($name) {
     // If the key exists in the map
     @if map-has-key($iz-breakpoints, $name) {
         // Prints a media query based on the value
@@ -31,7 +22,7 @@ $iz-breakpoints: (
 // Silent class
 //
 // Outputs a simple :after clearfix
-// ------------------------------------
+// ----------------------------------------------------------------------------
 %clearfix {
     &:after {
         clear: both;
@@ -45,7 +36,7 @@ $iz-breakpoints: (
 // Silent class
 //
 // Hides text effectively, avoids painting a block -9999px off-screen
-// ------------------------------------
+// ----------------------------------------------------------------------------
 %hide-text {
     overflow: hidden;
     text-indent: 100%; // bump to 110% if content is drawn in viewport

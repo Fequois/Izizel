@@ -1,12 +1,12 @@
 @charset 'utf-8';
 
-// ------------------------------------
-// I  Z  I  Z  E  L
-// ------------------------------------
+// ----------------------------------------------------------------------------
+// I  Z  I  Z  E  L    S  T  A  R  T  E  R    K  I  T
+// ----------------------------------------------------------------------------
 // Author:      Rasmus Eriksson
-// Version:     0.2.0
-// Last change: 19/05/2015
-// ------------------------------------
+// Version:     0.4.0
+// Last change: 03/06/2015
+// ----------------------------------------------------------------------------
 
 // Table of Contents
 
@@ -50,7 +50,7 @@
 
 
 // Settings
-// --------
+// ----------------------------------------------------------------------------
 @import 'settings/global';
 @import 'settings/breakpoints';
 @import 'settings/colors';
@@ -58,31 +58,31 @@
 
 
 // Libraries
-// ---------
+// ----------------------------------------------------------------------------
 @import 'lib/lib';
 
 
 // Tools
-// -----
+// ----------------------------------------------------------------------------
 @import 'tools/functions';
 @import 'tools/mixins';
 
 
 // Base
-// ----
+// ----------------------------------------------------------------------------
 @import 'base/reset';
 @import 'base/base';
 
 
 // Layouts
-// -------
+// ----------------------------------------------------------------------------
 @import 'layouts/susy';
 @import 'layouts/layouts';
 
 
 // Objects
 // Repeatable objects ('OOCSS')
-// -------
+// ----------------------------------------------------------------------------
 @import 'objects/typography';
 @import 'objects/buttons';
 @import 'objects/media';
@@ -94,7 +94,7 @@
 
 // Components
 // Individual, isolated components
-// ----------
+// ----------------------------------------------------------------------------
 @import 'components/header';
 @import 'components/navigation';
 @import 'components/footer';
@@ -102,5 +102,6 @@
 
 // Helpers
 // Overrides, helpers and utilities
-// -------
-@import 'helpers/helpers'; // include print styles
+// ----------------------------------------------------------------------------
+@import 'helpers/helpers';
+@import 'helpers/print';

@@ -1,0 +1,11 @@
+// Z-indexes
+//
+// Sass map containing z-index values for our z-index function. Adjust to suit
+// your specific needs.
+// ----------------------------------------------------------------------------
+$iz-z-layers: (
+    'default':  1,
+    'void':    -1000,
+    'dropdown': 100,
+    'modal':    200
+) !default;
