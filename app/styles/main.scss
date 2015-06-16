@@ -24,7 +24,6 @@
 // Mixins..............Mixins
 
 // BASE
-// Reset...............Modified normalize.css
 // Base................Styles for unclassed elements
 
 // LAYOUT
@@ -33,7 +32,7 @@
 
 // OBJECTS
 // Typography..........Type all the things
-// Buttons.............B
+// Buttons.............Buttons, button-states
 // Media...............Images, figures, captions
 // Lists...............Ordered and unordered lists
 // Forms...............Forms and input elements
@@ -70,7 +69,6 @@
 
 // Base
 // ----------------------------------------------------------------------------
-@import 'base/reset';
 @import 'base/base';
 
 
@@ -81,7 +79,8 @@
 
 
 // Objects
-// Repeatable objects ('OOCSS')
+//
+// Repeatable objects
 // ----------------------------------------------------------------------------
 @import 'objects/typography';
 @import 'objects/buttons';
@@ -93,6 +92,7 @@
 
 
 // Components
+//
 // Individual, isolated components
 // ----------------------------------------------------------------------------
 @import 'components/header';
@@ -101,6 +101,7 @@
 
 
 // Helpers
+//
 // Overrides, helpers and utilities
 // ----------------------------------------------------------------------------
 @import 'helpers/helpers';

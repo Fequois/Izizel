@@ -1,19 +1,25 @@
-// Palette
+// Brand Colours
 // ----------------------------------------------------------------------------
-$black: #444;
-$white: #fff;
-$blue: #477dca;
-$dark-gray: #888;
-$medium-gray: #ddd;
-$light-gray: #efefef;
+$color-primary:         #202844;
+$color-secondary:       #fb4f14;
+$color-info:            #a0d3e8;
+$color-error:           #f04124;
+$color-success:         #43ac6a;
 
-// Brand
+
+// Utility Palette
 // ----------------------------------------------------------------------------
-$primary-color: #202844;
-$secondary-color: #fb4f14;
+$color-white:           #fff;
+$color-ghost:           #fafafa;
+$color-iron:            #ccc;
+$color-aluminum:        #999;
+$color-steel:           #666;
+$color-charcoal:        #555;
+$color-black:           #222;
+
 
 // Typography
 // ----------------------------------------------------------------------------
-$base-background-color: $white;
-$base-font-color: $black;
-$action-color: $primary-color;
+$base-background-color: $color-white;
+$base-font-color:       $color-black;
+$action-color:          $color-primary;

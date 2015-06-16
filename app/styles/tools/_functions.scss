@@ -6,12 +6,12 @@
 
 // Add percentage of white to a color
 @function tint($color, $percent) {
-    @return mix($white, $color, $percent);
+    @return mix(#fff, $color, $percent);
 }
 
 // Add percentage of black to a color
 @function shade($color, $percent) {
-    @return mix($black, $color, $percent);
+    @return mix(#000, $color, $percent);
 }
 
 
@@ -22,7 +22,6 @@
 //
 // Thanks Zurb for making this available in Foundation.
 // ----------------------------------------------------------------------------
-$iz-base-font-size: 16px !default;
 
 // Strip the unit of measure and return the value
 @function strip-unit($num) {
@@ -30,14 +29,14 @@ $iz-base-font-size: 16px !default;
 }
 
 // Convert to rem
-@function convert-to-rem($value, $base-value: $iz-base-font-size) {
+@function convert-to-rem($value, $base-value: $rem-base) {
     $value: strip-unit($value) / strip-unit($base-value) * 1rem;
     @if ($value == 0rem) { $value: 0; } // scss-lint:disable ZeroUnit
     @return $value;
 }
 
 // Calculate rem value
-@function rem($values, $base-value: $iz-base-font-size) {
+@function rem($values, $base-value: $rem-base) {
     $max: length($values);
     @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
 
@@ -55,8 +54,7 @@ $iz-base-font-size: 16px !default;
 // ----------------------------------------------------------------------------
 @function z($layer) {
     @if not map-has-key($iz-z-layers, $layer) {
-        @warn "No z-index found in $z-layers map for `#{$layer}`. Property omitted.";
+        @warn "No z-index found in $iz-z-layers map for `#{$layer}`.";
     }
-
     @return map-get($iz-z-layers, $layer);
 }

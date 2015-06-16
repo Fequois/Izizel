@@ -19,12 +19,11 @@
 
 
 // Clearfix
-// Silent class
 //
-// Outputs a simple :after clearfix
+// Outputs a simple clearfix.
 // ----------------------------------------------------------------------------
 %clearfix {
-    &:after {
+    &::after {
         clear: both;
         content: '';
         display: table;
@@ -33,12 +32,24 @@
 
 
 // Hide Text
-// Silent class
 //
-// Hides text effectively, avoids painting a block -9999px off-screen
+// Hides text effectively, avoids painting a block -9999px off-screen.
 // ----------------------------------------------------------------------------
 %hide-text {
     overflow: hidden;
-    text-indent: 100%; // bump to 110% if content is drawn in viewport
+    text-indent: 101%; // bump value if content is drawn in viewport
     white-space: nowrap;
+}
+
+
+// Vertical Align
+//
+// Vertically align any element.
+// Note: use `transform-style: preserve-3d` on the container element to prevent
+// blurry edges caused by half-pixels.
+// ----------------------------------------------------------------------------
+%vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }

@@ -1,3 +1,47 @@
+// Base
+// ----------------------------------------------------------------------------
+
+// Parent value for box-sizing. All child elements will inherit this value
+// except those explictly overridden.
+$base-box-sizing: border-box !default;
+
+// This is the font size used as base rem value. The value is based on the
+// assumption that $base-font-size results in 16px. Adjust this along with
+// `$base-font-size` according to your needs.
+$rem-base: 16px;
+
+// The default `font-size` is set to 100% for compatibility with browser-based
+// text zoom or user-set defaults.
+$base-font-size: 100%;
+
+// A `line-height` equal to 1.5 times the element's font size.
+$base-line-height: 1.5;
+
+
+// Global
+// ----------------------------------------------------------------------------
+
+// Default font stacks
+$font-family-sans: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+$font-family-serif: 'Baskerville', 'Hoefler Text', 'Garamond', 'Times New Roman', serif;
+$font-family-monospace: 'Consolas', 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Monaco', monospace;
+
+// Default font weights
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+
+// Text rendering: best left to `auto` and defined to specific elements
+// due to its negative rendering performance impact.
+$base-text-rendering: auto !default;
+
+// Small size for <small> element
+$font-small-size: 65% !default;
+
+// Settings for the saucy ::selection pseudo.
+$selection-background-color: #ea456f !default;
+$selection-text-shadow: none !default;
+
+
 // Z-indexes
 //
 // Sass map containing z-index values for our z-index function. Adjust to suit

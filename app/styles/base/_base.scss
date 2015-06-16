@@ -1,18 +1,151 @@
-// Global box-sizing
-// Reset to border-box and allow changes to it on component levels
+// Universal defaults
 // ----------------------------------------------------------------------------
-html {
-    box-sizing: border-box;
-    font-family: sans-serif;
+
+:root {
+    box-sizing: $base-box-sizing;
+    font: #{$base-font-size}/#{$base-line-height} $font-family-sans;
+    -ms-overflow-style: -ms-autohiding-scrollbar; // IE11+
+    overflow-y: scroll; // All browsers without overlaying scrollbars.
+    text-rendering: $base-text-rendering;
     text-size-adjust: 100%;
 }
 
 *,
-*:before,
-*:after {
+::before,
+::after {
+    // Specify solid border style of all elements.
+    border-style: solid;
+    border-width: 0;
+
+    // Inherit box-sizing from parent.
     box-sizing: inherit;
 }
 
-body {
-    text-rendering: auto;
+::before,
+::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
 }
+
+* {
+    font: inherit;
+    line-height: inherit;
+
+    // Remove margin and padding of all elements.
+    margin: 0;
+    padding: 0;
+
+    // w00t
+    vertical-align: baseline;
+}
+
+// Text selection background color and omit drop shadow.
+::selection {
+    background-color: $selection-background-color;
+    text-shadow: $selection-text-shadow;
+}
+
+body {
+    color: $base-font-color;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+
+// Normalization
+// ----------------------------------------------------------------------------
+
+// Correct `block` display not defined for any HTML5 element in IE 8/9.
+// Correct `block` display not defined for `details` or `summary` in
+// IE 10/11 and Firefox.
+// Correct `block` display not defined for `main` in IE 11.
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+// 1. Correct `inline-block` display not defined in IE 8/9.
+// 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    display: inline-block; // 1
+    vertical-align: baseline; // 2
+}
+
+// Prevent modern browsers from displaying `audio` without controls.
+audio:not([controls]) {
+    display: none;
+}
+
+// Address margin not present in IE 8/9 and Safari.
+figure {
+    margin: 1rem 2.5rem;
+}
+
+// 1. Address differences between Firefox and other browsers.
+// 2. Address `overflow` set to `hidden` in IE 8/9/10/11.
+hr {
+    box-sizing: content-box; // 1
+    height: 0; // 1
+    overflow: visible; // 2
+}
+
+// Remove default vertical scrollbar in IE 8/9/10/11.
+textarea,
+pre {
+    overflow: auto;
+}
+
+// Address odd `em`-unit font size rendering in all browsers.
+code,
+kbd,
+pre,
+samp {
+    font-family: $font-family-monospace;
+    font-size: 1rem;
+}
+
+// Address `[hidden]` styling not present in IE 8/9/10.
+// Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+[hidden],
+template {
+    display: none;
+}
+
+[unselectable] {
+    user-select: none; // Android 4.4+, Chrome 40+, Firefox 36+, iOS 8+, Safari 8+
+}
+
+
+// Media
+// ----------------------------------------------------------------------------
+@import 'base/partials/media';
+
+
+// Typography
+// ----------------------------------------------------------------------------
+@import 'base/partials/typography';
+
+
+// Forms
+// ----------------------------------------------------------------------------
+@import 'base/partials/forms';
+
+
+// Tables
+// ----------------------------------------------------------------------------
+@import 'base/partials/tables';
