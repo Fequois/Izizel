@@ -1,3 +1,42 @@
+// Typescale
+//
+// Calculate and output headers based on values from a map (typescale).
+//
+// @notes
+// Requires the modular-scale module by Sass. Uncomment the block below
+// for a more basic but independent version. Also uncomment the scale in
+// `settings/_typography.scss`.
+// ----------------------------------------------------------------------------
+@mixin headings($max-heading: 1, $min-heading: 6) {
+    $number-of-headings: $min-heading - $max-heading + 1;
+
+    @for $i from 1 through $number-of-headings {
+        $heading: $number-of-headings - $i + $max-heading;
+
+        h#{$heading} {
+            $size: ms($i - 1);
+            font-size: $size;
+            margin-bottom: rem($size / $ms-ratio * 5);
+        }
+    }
+}
+
+// @mixin typescale($scale, $base, $measure) {
+//     font-size: rem($scale);
+//     margin-bottom: #{$measure / $scale * .5}rem; // base on modular scale
+// }
+//
+// @mixin headings {
+//     $base-font-size: strip-unit($base-font-size);
+//
+//     @each $name, $size in $iz-typescale {
+//         #{$name} {
+//             @include typescale($size, $base-font-size, $base-font-size * $base-line-height);
+//         }
+//     }
+// }
+
+
 // Media Queries
 //
 // Simplifies management of media queries in our CSS. Takes our content,

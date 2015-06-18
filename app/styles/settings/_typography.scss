@@ -1,6 +1,4 @@
 // Modular Scale
-//
-// Variables for ratios and the base font size.
 // ----------------------------------------------------------------------------
 $golden           : 1.618034;
 $double-octave    : 4;
@@ -20,7 +18,19 @@ $minor-third      : 1.2;
 $major-second     : 1.125;
 $minor-second     : 1.066666667;
 
-// Base font size
 $ms-base: 1rem;
-// Size ratio
 $ms-ratio: $major-third;
+
+
+// Header Typescale
+//
+// Values used by mixins to generate headers (`h1` etc).
+// ----------------------------------------------------------------------------
+// $iz-typescale: (
+//     'h1': 60,
+//     'h2': 48,
+//     'h3': 36,
+//     'h4': 24,
+//     'h5': 21,
+//     'h6': 18
+// ) !default;
