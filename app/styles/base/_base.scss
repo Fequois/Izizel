@@ -47,6 +47,7 @@
 
 body {
     color: $base-font-color;
+    font-feature-settings: 'calt', 'liga', 'clig', 'frac', 'ordn';
     hyphens: auto;
     word-wrap: break-word;
 }

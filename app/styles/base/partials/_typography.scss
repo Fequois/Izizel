@@ -18,10 +18,10 @@ h6 {
 // Paragraphs
 // ----------------------------------------------------------------------------
 p {
-    margin: auto auto 1rem; // CHANGE ME
+    margin: auto auto rem(20);
 
     + p {
-        margin-top: -1rem;
+        margin-top: rem(-20);
         text-indent: 1rem;
     }
 }
@@ -31,9 +31,9 @@ p {
 // ----------------------------------------------------------------------------
 abbr {
     color: $color-black;
-    font-variant: small-caps;
+    font-feature-settings: 'c2sc', 'smcp';
+    font-variant: small-caps; // Safari lacks `font-feature-settings` support
     font-weight: $font-weight-normal;
-    text-transform: lowercase;
 
     // Address styling not present in IE 8/9/10/11, Safari, and Chrome.
     &[title] {
