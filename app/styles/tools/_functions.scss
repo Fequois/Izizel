@@ -15,18 +15,22 @@
 }
 
 
-// Rem Calculator
+// Strip Unit
 //
-// Lets you ouput rem values based on pixel input. This works for single and
-// multiple values.
-//
-// Thanks Zurb for making this available in Foundation.
-// ----------------------------------------------------------------------------
-
 // Strip the unit of measure and return the value
+//-----------------------------------------------------------------------------
 @function strip-unit($num) {
     @return $num / ($num * 0 + 1);
 }
+
+
+// Rem Calculator
+//
+// Ouput rem values based on pixel input. This works for both single and
+// multiple values.
+//
+// Thanks Zurb.
+// ----------------------------------------------------------------------------
 
 // Convert to rem
 @function convert-to-rem($value, $base-value: $rem-base) {
