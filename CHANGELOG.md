@@ -1,5 +1,8 @@
 ## Change Log
 
+### 0.5.0.1
+ - Update Node.js dependencies
+
 ### 0.5.0
  - Brought Normalize.css up to speed
  - Modified and merged Normalize.css and Sanitize.scss.
