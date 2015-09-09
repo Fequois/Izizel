@@ -1,0 +1,21 @@
+{
+	"bitwise": true,
+	"boss": true,
+	"browser": true,
+	"curly": true,
+	"esnext": true,
+	"eqeqeq": true,
+	"eqnull": true,
+	"expr": true,
+	"forin": true,
+	"immed": true,
+    "jquery": true,
+	"latedef": true,
+	"noarg": true,
+	"node": true,
+	"nonew": true,
+	"onevar": true,
+	"quotmark": "double",
+	"undef": true,
+	"unused": true
+}
