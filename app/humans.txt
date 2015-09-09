@@ -1,14 +1,18 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
-
 # TEAM
 
-  <name> -- <role> -- <twitter>
+    Name: <full name>
+    Site: <url>
+    Twitter: <profile link>
+    Location: <city, country>
 
 # THANKS
 
-  <name>
+    Name: <credits>
 
-# TECHNOLOGY COLOPHON
+# SITE
 
-  HTML5, CSS3
+    Last update: <year-month-day>
+    Language: <site language>
+    Standards: <web standards>
+    Components: <components used to build the website>
+    Software: <apps and tools>
