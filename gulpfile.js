@@ -44,7 +44,7 @@ gulp.task('styles', function () {
       includePaths: ['.']
     }).on('error', $.sass.logError))
     .pipe($.postcss([
-      require('autoprefixer-core')({
+      require('autoprefixer')({
         browsers:
           [
             '> 2%',
