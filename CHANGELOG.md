@@ -1,10 +1,21 @@
 ## Change Log
 
+### 0.6.0
+ - Major Sass structure refactor (and hopefully the last one).
+ - Various components re-prioritized to better compatibility.
+ - Lifted some pretty cool shit from Bootstrap 4 alpha.
+ - Made the whole css "normalization" a little less obtrusive/strict.
+ - Fixed the jQuery dependency to correctly download 2.1.x instead of 1.x.
+ - Removed css "prefixes". It might sound counter-productive but I will never
+   integrate any complicated components or scripts that can cause conflicts.
+ - Dropped Modernizr as dependency; prefer custom builds (lighter).
+ - Updated Node.js dependencies again
+
 ### 0.5.0.1
  - Update Node.js dependencies
 
 ### 0.5.0
- - Brought Normalize.css up to speed
+ - Brought Normalize.css up to speed.
  - Modified and merged Normalize.css and Sanitize.scss.
  - Integrated the result of above into the project to avoid duplicate entries
    and allow for easier and quicker customization. (Usable, but not done yet.)
