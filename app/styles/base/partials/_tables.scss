@@ -1,13 +1,25 @@
-// Tables
-// ----------------------------------------------------------------------------
-
-// Remove most spacing between table cells.
+// 1. Reset for nesting within parents with `background-color`.
+// 2. Remove most spacing between table cells.
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+    background-color: $table-bg; // 1
+    border-collapse: collapse; // 2
+    border-spacing: 0; // 2
+}
+
+caption {
+    caption-side: bottom;
+    color: $gray-light;
+    padding-bottom: $table-cell-padding;
+    padding-top: $table-cell-padding;
+    text-align: left;
 }
 
 td,
 th {
     padding: 0;
+}
+
+th {
+    // Centered by default, but left-aligned to match the `td`s below.
+    text-align: left;
 }

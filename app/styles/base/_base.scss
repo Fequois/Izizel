@@ -1,24 +1,51 @@
 // Universal defaults
 // ----------------------------------------------------------------------------
-
 :root {
-    box-sizing: $base-box-sizing;
-    font: #{$base-font-size}/#{$base-line-height} $font-family-sans;
-    -ms-overflow-style: -ms-autohiding-scrollbar; // IE11+
-    overflow-y: scroll; // All browsers without overlaying scrollbars.
-    text-rendering: $base-text-rendering;
-    text-size-adjust: 100%;
+    // scss-lint:disable VendorPrefix
+    box-sizing: $box-sizing-base;
+    font-family: $font-family-base;
+    // Sets a specific default `font-size` for use with `rem` type scales.
+    font-size: $font-size-root;
+    // Auto hide persistent scrollbar in Edge, IE 11-
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    // All browsers without overlaying scrollbars.
+    overflow-y: scroll;
+    // Changes the default tap highlight to be completely transparent in iOS.
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-rendering: $text-rendering-base;
+    // Prevent iOS text size adjust after device orientation change
+    // without disabling user zoom.
+    -webkit-text-size-adjust: 100%;
+}
+
+html {
+    // By default, `<html>` has no `background-color` so
+    // we set one as a best practice.
+    background-color: $body-bg;
+    color: $body-color;
+}
+
+body {
+    // Make `body` use `font-size-root`
+    font-size: $font-size-base;
+    hyphens: auto;
+    line-height: $line-height;
+    word-wrap: break-word;
 }
 
 *,
 ::before,
 ::after {
-    // Specify solid border style of all elements.
-    border-style: solid;
-    border-width: 0;
-
-    // Inherit box-sizing from parent.
+    // Inherit box-sizing from parent
     box-sizing: inherit;
+}
+
+* {
+    font-size: inherit;
+    line-height: inherit;
+    // Remove margin and padding of all elements.
+    margin: 0;
+    padding: 0;
 }
 
 ::before,
@@ -27,35 +54,15 @@
     vertical-align: inherit;
 }
 
-* {
-    font: inherit;
-    line-height: inherit;
-
-    // Remove margin and padding of all elements.
-    margin: 0;
-    padding: 0;
-
-    // w00t
-    vertical-align: baseline;
-}
-
 // Text selection background color and omit drop shadow.
 ::selection {
-    background-color: $selection-background-color;
+    background-color: $selection-bg-color;
     text-shadow: $selection-text-shadow;
-}
-
-body {
-    color: $base-font-color;
-    font-feature-settings: 'calt', 'liga', 'clig', 'frac', 'ordn';
-    hyphens: auto;
-    word-wrap: break-word;
 }
 
 
 // Normalization
 // ----------------------------------------------------------------------------
-
 // Correct `block` display not defined for any HTML5 element in IE 8/9.
 // Correct `block` display not defined for `details` or `summary` in
 // IE 10/11 and Firefox.
@@ -75,16 +82,15 @@ summary {
     display: block;
 }
 
-// 1. Correct `inline-block` display not defined in IE 8/9.
-// 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
 audio,
 canvas,
 iframe,
-img,
 svg,
 video {
-    display: inline-block; // 1
-    vertical-align: baseline; // 2
+    // Correct `inline-block` display not defined in IE 8/9
+    display: inline-block;
+    // Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera
+    vertical-align: baseline;
 }
 
 // Prevent modern browsers from displaying `audio` without controls.
@@ -94,15 +100,15 @@ audio:not([controls]) {
 
 // Address margin not present in IE 8/9 and Safari.
 figure {
-    margin: 1rem 2.5rem;
+    margin: 0 0 1rem;
 }
 
-// 1. Address differences between Firefox and other browsers.
-// 2. Address `overflow` set to `hidden` in IE 8/9/10/11.
 hr {
-    box-sizing: content-box; // 1
-    height: 0; // 1
-    overflow: visible; // 2
+    // Address differences between Firefox and other browsers
+    box-sizing: content-box;
+    height: 0;
+    // Address `overflow` set to `hidden` in IE 8/9/10/11
+    overflow: visible;
 }
 
 // Remove default vertical scrollbar in IE 8/9/10/11.
@@ -128,25 +134,18 @@ template {
 }
 
 [unselectable] {
-    user-select: none; // Android 4.4+, Chrome 40+, Firefox 36+, iOS 8+, Safari 8+
+    // Android 4.4+, Chrome 40+, Firefox 36+, iOS 8+, Safari 8+
+    user-select: none;
 }
 
 
-// Media
+// Import partials
 // ----------------------------------------------------------------------------
-@import 'base/partials/media';
-
-
-// Typography
-// ----------------------------------------------------------------------------
-@import 'base/partials/typography';
-
-
-// Forms
-// ----------------------------------------------------------------------------
-@import 'base/partials/forms';
-
-
-// Tables
-// ----------------------------------------------------------------------------
-@import 'base/partials/tables';
+// Media object defaults
+@import "base/partials/media";
+// Typographic defaults
+@import "base/partials/typography";
+// Form defaults
+@import "base/partials/forms";
+// Table defaults
+@import "base/partials/tables";

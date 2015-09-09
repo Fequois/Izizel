@@ -1,15 +1,29 @@
-// Embedded content
-// ----------------------------------------------------------------------------
-
-// 1. Remove border when inside `a` element in IE 8/9/10.
-// 2. Images adapt responsibly to their container.
 img {
-    border: 0; // 1
-    height: auto; // 2
-    max-width: 100%; // 2
+    // Remove border when inside `a` element in IE 8/9/10
+    border: 0;
+    // Images adapt responsibly to their container
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 // Correct overflow not hidden in IE 9/10/11.
 svg:not(:root) {
     overflow: hidden;
+}
+
+// Normalize `<figure>`
+figure {
+    // Ensures the caption's text aligns with the image.
+    display: inline-block;
+
+    > img {
+        line-height: 1;
+        margin-bottom: ($spacer-y / 2);
+    }
+}
+
+figcaption {
+    color: $gray-light;
+    font-size: 90%;
 }

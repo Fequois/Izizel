@@ -1,0 +1,10 @@
+// Susy
+//
+// Set up the grid to use the parameters defined in `settings.scss`
+// ----------------------------------------------------------------------------
+$susy: (
+    "container": $grid-container,
+    "columns": $grid-columns,
+    "global-box-sizing": $grid-box-sizing,
+    "gutters": $grid-gutters
+);
