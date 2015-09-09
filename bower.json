@@ -2,11 +2,10 @@
   "name": "Izizel Starter Kit",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.3",
-    "modernizr": "~2.8.3"
+    "jquery": "~2.1.4"
   },
   "devDependencies": {
     "modular-scale": "~2.1.1",
-    "susy": "~2.2.5"
+    "susy": "~2.2.6"
   }
 }
