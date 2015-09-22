@@ -1,6 +1,3 @@
-# scss-lint 0.39.0
-# https://github.com/brigade/scss-lint#configuration
-
 linters:
   BangFormat:
     enabled: true
@@ -8,18 +5,18 @@ linters:
     space_after_bang: false
 
   BemDepth:
-    enabled: true
     max_elements: 1
 
   BorderZero:
     enabled: true
-    convention: zero # or `none`
+    convention: none
 
   ColorKeyword:
     enabled: true
+    severity: warning
 
   ColorVariable:
-    enabled: false
+    enabled: true
 
   Comment:
     enabled: true
@@ -35,7 +32,7 @@ linters:
 
   ElsePlacement:
     enabled: true
-    style: same_line # or `new_line`
+    style: same_line
 
   EmptyLineBetweenBlocks:
     enabled: true
@@ -49,12 +46,12 @@ linters:
     present: true
 
   HexLength:
-    enabled: true
-    style: short # or `long`
+    enabled: false
+    style: short
 
   HexNotation:
     enabled: true
-    style: lowercase # or `uppercase`
+    style: lowercase
 
   HexValidation:
     enabled: true
@@ -73,12 +70,12 @@ linters:
   Indentation:
     enabled: true
     allow_non_nested_indentation: false
-    character: space # or `tab`
+    character: space
     width: 4
 
   LeadingZero:
     enabled: true
-    style: exclude_zero # or `include_zero`
+    style: include_zero
 
   MergeableSelector:
     enabled: true
@@ -87,37 +84,25 @@ linters:
   NameFormat:
     enabled: true
     allow_leading_underscore: true
-    convention: hyphenated_lowercase # or `camel_case`, or `snake_case`, or a regex pattern
+    convention: hyphenated_lowercase
 
   NestingDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 4
+    severity: warning
 
   PlaceholderInExtend:
     enabled: true
 
   PropertyCount:
-    enabled: false
+    enabled: true
     include_nested: false
     max_properties: 10
-
-  PropertyUnits:
-    enabled: true
-    global: [
-      'ch', 'em', 'ex', 'rem',                 # Font-relative lengths
-      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q', # Absolute lengths
-      'vh', 'vw', 'vmin', 'vmax',              # Viewport-percentage lengths
-      'deg', 'grad', 'rad', 'turn',            # Angle
-      'ms', 's',                               # Duration
-      'Hz', 'kHz',                             # Frequency
-      'dpi', 'dpcm', 'dppx',                   # Resolution
-      '%']                                     # Other
-    properties: {}
 
   PropertySortOrder:
     enabled: true
     ignore_unspecified: false
-    min_properties: 2
+    severity: warning
     separate_groups: false
 
   PropertySpelling:
@@ -126,21 +111,23 @@ linters:
 
   QualifyingElement:
     enabled: true
-    allow_element_with_attribute: true
+    allow_element_with_attribute: false
     allow_element_with_class: false
     allow_element_with_id: false
+    severity: warning
 
   SelectorDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 2
+    severity: warning
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_BEM # or `strict_BEM`, or `hyphenated_BEM`, or `snake_case`, or `camel_case`, or a regex pattern
+    convention: hyphenated_BEM
 
   Shorthand:
     enabled: true
-    allowed_shorthands: [1, 2, 3]
+    severity: warning
 
   SingleLinePerProperty:
     enabled: true
@@ -154,14 +141,21 @@ linters:
 
   SpaceAfterPropertyColon:
     enabled: true
-    style: one_space # or `no_space`, or `at_least_one_space`, or `aligned`
+    style: one_space
 
   SpaceAfterPropertyName:
     enabled: true
 
+  SpaceAfterVariableName:
+    enabled: true
+
+  SpaceAroundOperator:
+    enabled: true
+    style: one_space
+
   SpaceBeforeBrace:
     enabled: true
-    style: space # or `new_line`
+    style: space
     allow_single_line_padding: false
 
   SpaceBetweenParens:
@@ -170,13 +164,19 @@ linters:
 
   StringQuotes:
     enabled: true
-    style: double_quotes # or `single_quotes`
+    style: double_quotes
 
   TrailingSemicolon:
     enabled: true
 
+  TrailingWhitespace:
+    enabled: true
+
   TrailingZero:
     enabled: false
+
+  TransitionAll:
+    enabled: true
 
   UnnecessaryMantissa:
     enabled: true
@@ -194,7 +194,7 @@ linters:
     enabled: false
     properties: []
 
-  VendorPrefix:
+  VendorPrefixes:
     enabled: true
     identifier_list: base
     additional_identifiers: []
@@ -202,6 +202,4 @@ linters:
 
   ZeroUnit:
     enabled: true
-
-  Compass::*:
-    enabled: false
+    severity: warning
