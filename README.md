@@ -1,6 +1,6 @@
 # [Izizel Starter Kit](http://rasmus.io/izizel/)
 
-[![devDependency Status](https://david-dm.org/fequois/izizel/dev-status.svg)](https://david-dm.org/fequois/izizel#info=devDependencies)
+[![Build Status](https://travis-ci.org/Fequois/Izizel.svg?branch=master)](https://travis-ci.org/Fequois/Izizel) [![devDependency Status](https://david-dm.org/fequois/izizel/dev-status.svg)](https://david-dm.org/fequois/izizel#info=devDependencies)
 
 Izizel is a front-end starter kit with a bunch opinionated defaults. Its
 objective is to be a fast and flexible starting point for new web projects.
