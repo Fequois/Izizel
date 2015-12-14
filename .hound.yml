@@ -1,5 +1,2 @@
-javascript:
-  config_file: .jshintrc
-
 scss:
   config_file: .scss-lint.yml
