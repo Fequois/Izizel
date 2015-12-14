@@ -82,14 +82,11 @@ gulp.task('jshint', jshint('app/scripts/**/*.js'));
  --------------------------------------------------------------------------- */
 
 gulp.task('html', ['styles'], function () {
-  var assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
   return gulp.src('app/*.html')
-    .pipe(assets)
+    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css',$.minifyCss({compatibility: 'ie8'})))
-    .pipe(assets.restore())
-    .pipe($.useref())
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist'));
 });
